@@ -2,14 +2,14 @@ import './about.css'
 import CSS from '../../assets/css.svg'
 import HTML from '../../assets/html.svg'
 import JS from '../../assets/js.svg'
-import PY from '../../assetspy.svg'
+import PY from '../../assets/py.svg'
 import { useState } from 'react'
 
 function About() {
-    const [display, setDeiplay] = useState('block')
+    const [display, setDisplay] = useState('block')
     const [buttonText, setButtonText] = useState('Hide')
 
-    function toogle() {
+    function toggle() {
         if (display == 'none') {
             setDisplay('block')
             setButtonText('Hide')
@@ -27,7 +27,7 @@ function About() {
             </h2>
             <div style={{display: display}}>
                 <p>
-                    I am student at Boston University studying {major}. i'm currently a memebr of {organization}.
+                    I'm a student at Boston University studying Computer Science. I'm currently a member of [organization]. I'm excited to learn more about Systems Level Programming and Networking. I have experience in [skill 1], [skill 2], and [skill 3]. Feel free to contact me at yourEmailHere@gmail.com!
                 </p>
                 <br/>
                 <h3>My Skills</h3>
@@ -41,3 +41,5 @@ function About() {
         </div>
     )
 }
+
+export default About
