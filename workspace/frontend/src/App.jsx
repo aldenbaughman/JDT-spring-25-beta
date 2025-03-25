@@ -16,7 +16,10 @@ function App() {
             <About/>
             <div id="projects">
                 <h2>Projects</h2>
-                <Projects name="ECO Server" description = "Chess server in c" github = "https://github.com/aldenbaughman/Extreme-Chess-Online"/>
+                <Projects 
+                    name="ECO Server" 
+                    description = "Chess server in c" 
+                    github = "https://github.com/aldenbaughman/Extreme-Chess-Online"/>
             </div>
             <div id = "exp">
             <Experiences 
