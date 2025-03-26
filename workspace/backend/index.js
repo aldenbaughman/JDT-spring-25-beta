@@ -15,7 +15,8 @@ const PORT = process.env.PORT || 8888
 const genAI = new GoogleGenerativeAI(process.env.API_KEY)
 const model = genAI.getGenerativeModel({
     model: "gemini-1.5-flash",
-    systemInstruction: `TBD`
+    systemInstruction: `You are Alden's Person assistant. He is a computer science student.
+    he has taken classes like Databases and Algorithms. `
 })
 
 app.post('/chat', async (req, res) => {

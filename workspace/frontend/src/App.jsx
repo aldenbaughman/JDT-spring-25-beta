@@ -12,7 +12,6 @@ function App() {
         <>
             <Navbar/>
             <Profile/>
-            <Chat/>
             <About/>
             <div id="projects">
                 <h2>Projects</h2>
@@ -28,6 +27,7 @@ function App() {
                 dates="1230 - 1560" 
                 bullets={["wefwef 1", "wef 2", "wefwef 3"]} />
             </div>
+            <Chat/>
         </>
     )
 }
