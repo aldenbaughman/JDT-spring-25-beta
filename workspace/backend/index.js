@@ -69,3 +69,18 @@ app.post('/add', async (req, res) =>{
         res.status(500).json({ message: 'Error' })
     }
 })
+
+app.post('/delete', async (req, res) =>{
+    try{
+        const log = req.body
+        if (!log.input || !log.response || Object.keys(log).length !== 2){
+            res.status(400).json({ message: 'Bad Request' })
+            return
+        }
+        await mongoclient.db('JDT-PersonalWebsite').collection('logs').deleteOne(log)
+        res.status(201).json({ message: 'Success' })
+    }catch(error){
+        console.error(error)
+        res.status(500).json({ message: 'Error' })
+    }
+})
